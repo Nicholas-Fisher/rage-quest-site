@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Rage Quest, Rage, Quest, RPG, Internet hate">
+  <meta name="author" content="Nicholas Fisher">
+  <meta name="description" content="Zye has awoken in the internet, and the only way to get out is to fight past its worst elements and harness its strongest force... hate">
+  <title>Rage Quest</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <script src="js/vendor/vue.min.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39764768-4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-39764768-4');
+  </script>
+</head>
+<body>
+  <div id="app">
+    <div class="main-header">
+      <div class="main-header-bar not-on-mobile">
+        <button class="header-btn" @click="setCurrentTabTo('about')" :class="{'active': currentTab === 'about'}">
+          <fa icon="question-circle"></fa>
+          <span>About</span>
+        </button>
+        <button class="header-btn" @click="setCurrentTabTo('media')" :class="{'active': currentTab === 'media'}">
+          <fa icon="image"></fa>
+          <span>Media</span>
+          </button>
+        <button class="header-btn" @click="setCurrentTabTo('presskit')" :class="{'active': currentTab === 'presskit'}">
+          <fa icon="newspaper-o"></fa>
+          <span>Press Kit</span>
+        </button>
+        <button class="header-btn" @click="setCurrentTabTo('demo')" :class="{'active': currentTab === 'demo'}">
+          <fa icon="gamepad"></fa>
+          <span>Demo</span>
+        </button>
+        <div>
+          <a class="icon-btn" target="_blank" href="https://twitter.com/NickFisherDev"><fa icon="twitter"></fa></a>
+          <a class="icon-btn" target="_blank" href="https://www.facebook.com/ragequest/"><fa icon="facebook"></fa></a>
+          <a class="icon-btn" target="_blank" href="mailto:nickfishergamedev@gmail.com"><fa icon="envelope"></fa></a>
+        </div>
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="about" v-show="currentTab === 'about'">
+        <div class="card centered-content">
+          <div class="card-video">
+            <iframe src="https://www.youtube.com/embed/btcaXUfzBe8?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="flourish-text">Zye has awoken in the internet, and the only way to get out is to fight past its worst elements and harness its strongest force... <span>hate</span></div>
+        </div>
+        <div class="card">
+          <div class="subtitle-text">Available now on:</div>
+          <div class="btn-row">
+          	<a target="_blank" class="std-btn" href="http://store.steampowered.com/app/709290/Rage_Quest/"><fa icon="steam"></fa><span>Steam</span></a>
+          	<a target="_blank" class="std-btn" href="https://nicholasfisher.itch.io/rage-quest"><fa icon="gamepad"></fa><span>Itch.io</span></a>
+          	<a target="_blank" class="std-btn" href="https://play.google.com/store/apps/details?id=air.com.nicholasfisher.ragequestrelease" href="#"><fa icon="play"></fa><span>Google Play</span></a>
+          	<a target="_blank" class="std-btn" href="https://www.amazon.com/dp/B0769QK7GB/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1510174409&sr=1-1&keywords=rage+quest"><fa icon="amazon"></fa><span>Amazon App Store</span></a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="subtitle-text">A new kind of RPG combat system</div>
+          <p>Rage Quest is a real-time, tile-based, combat RPG where you you have to carefully time and chain your actions for maximum effectiveness.</p>
+          <p>Every action has a charge time (the time until the action executes) and a cooldown time (the time until the action can be used again). The player must think both quickly and strategically to be effective in combat. It's not just about using the right actions together, but timing the execution of them as well.</p>
+          <div class="gallery">
+            <thumb class="large" img="css/images/tinified/twitchattack.gif"></thumb>
+          </div>
+        </div>
+        <div class="card">
+          <div class="subtitle-text">Worlds you've known your whole life, like you've never seen before</div>
+          <p>On his quest, Zye will travel to the worlds of social media, online gaming, and corporate influence to combat their most hated elements and siphon their power. In these worlds he will meet characters such as The Hive Mind, Gamergate, The Twitch Chat, trolls, flamers, hackers, bloatware, malware, spambots, user data, censorship, fake news and many more.</p>
+          <div class="gallery">
+            <thumb img="css/images/tinified/surface.png"></thumb>
+            <thumb img="css/images/tinified/hive.png"></thumb>
+            <thumb img="css/images/tinified/pit2.png"></thumb>
+          </div>
+        </div>
+        <div class="card">
+          <div class="subtitle-text">Learn any ability, buy any item, right from the start</div>
+          <p>Rage Quest is an RPG where every ability and item purchase is unlocked from the start. Most games avoid this because it can be tough to balance, but the payoff is free-form and creative game play. Besides, if you're able to break the game by being super clever, then you've earned it.</p>
+          <div class="gallery">
+            <thumb img="css/images/tinified/items.png"></thumb>
+            <thumb img="css/images/tinified/abilities.png"></thumb>
+            <thumb img="css/images/tinified/equipment.png"></thumb>
+          </div>
+        </div>
+      </div>
+      <div class="media" v-show="currentTab === 'media'">
+        <div class="card">
+          <div class="subtitle-text">Screenshots</div>
+          <div class="gallery">
+            <thumb img="css/images/tinified/tco1080.png"></thumb>
+            <thumb img="css/images/tinified/hive.png"></thumb>
+            <thumb img="css/images/tinified/packet.png"></thumb>
+            <thumb img="css/images/tinified/insanity.png"></thumb>
+            <thumb img="css/images/tinified/safezone.png"></thumb>
+            <thumb img="css/images/tinified/adblockshead.png"></thumb>
+            <thumb img="css/images/tinified/quest.png"></thumb>
+            <thumb img="css/images/tinified/adblocksave.png"></thumb>
+            <thumb img="css/images/tinified/oracle.png"></thumb>
+            <thumb img="css/images/tinified/pit.png"></thumb>
+            <thumb img="css/images/tinified/explosioningame.png"></thumb>
+            <thumb img="css/images/tinified/comments.png"></thumb>
+            <thumb img="css/images/tinified/pit2.png"></thumb>
+            <thumb img="css/images/tinified/pitchfork.png"></thumb>
+            <thumb img="css/images/tinified/surface.png"></thumb>
+            <thumb img="css/images/tinified/items.png"></thumb>
+            <thumb img="css/images/tinified/abilities.png"></thumb>
+            <thumb img="css/images/tinified/equipment.png"></thumb>
+          </div>
+        </div>
+        <div class="card">
+          <div class="subtitle-text">Gifs</div>
+          <div class="gallery">
+            <thumb class="large" img="css/images/tinified/twitchattack.gif"></thumb>
+            <thumb class="large" img="https://media.giphy.com/media/Zqb5mdVAyR05i/giphy.gif"></thumb>
+          </div>
+        </div>
+        <div class="card">
+          <div class="subtitle-text">Video</div>
+          <div class="gallery">
+            <div class="card-video">
+              <iframe src="https://www.youtube.com/embed/btcaXUfzBe8?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="presskit" v-show="currentTab === 'presskit'">
+        <div class="card">
+          <div class="btn-row">
+            <a target="_blank" class="std-btn" href="Presskit.zip" download><fa icon="cloud-download"></fa>Press Kit Download</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="subtitle-text">Fact Sheet</div>
+          <div class="form">
+            <div class="pair"><span>Release Date:</span><span>November 8th 2017</span></div>
+            <div class="pair"><span>Developer:</span><span>Nicholas Fisher</span></div>
+            <div class="pair"><span>Location:</span><span>Toronto, Ontario</span></div>
+            <div class="pair"><span>Contact:</span><span>nickfishergamedev@gmail</span></div>
+            <div class="pair"><span>Platforms:</span><span>Windows, Mac, Android, iOS</span></div>
+            <div class="pair"><span>Store fronts:</span><span>Steam, itch.io, Google Play, Amazon App Store</span></div>
+            <div class="pair"><span>Genre:</span><span>Tile-based, real-time, combat RPG</span></div>
+            <div class="pair"><span>Website:</span><span>ragequestgame.com</span></div>
+            <div class="pair"><span>Twitter:</span><span>@NickFisherDev</span></div>
+            <div class="pair"><span>Facebook:</span><span>/ragequest</span></div>
+            <div class="pair"><span>Languages:</span><span>Just English for now</span></div>
+            <div class="pair"><span>ESRB:</span><span>T for Teen</span></div>
+            <div class="pair"><span>File Size:</span><span>~60mb</span></div>
+            <div class="pair"><span>Price:</span><span>7.99 USD on PC and 3.99 USD on mobile</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="subtitle-text">Game Description</div>
+          <p>
+            You play as Zye, a man who has awoken in the internet and has no idea how he got there. Shortly after dispatching a YouTube comment (the game’s first enemy), he learns that the only way he’s going to escape the internet and return to the real world is to amass enough energy to create a portal. However, the only energy source prevalent enough on the internet to fuel this escape is… hate.
+          </p>
+          <p>
+            On his quest, Zye will travel to the worlds of social media, online gaming, and corporate influence to combat their most hated elements and siphon their power. In these worlds he will meet characters such as The Hive Mind, Gamergate, The Twitch Chat, trolls, flamers, hackers, bloatware, malware, spambots, user data, censorship, fake news and many more.
+          </p>
+          <p>
+            Ultimately, Rage Quest is a game about how and why we hate.
+          </p>
+        </div>
+        <div class="card">
+          <div class="subtitle-text">Gameplay Features</div>
+          <p>
+            Rage Quest is a combat RPG that tries to distill the best parts of the genre while dispensing the more questionable staples
+          </p>
+          <ul>
+            <li><span>A new kind of RPG combat system:</span><span>Instead of being strictly turn based, combat actions all revolve around charge and cooldown times. This marries the strategic elements of methodical combat with the thrill of quick thinking.</li>
+            <li><span>Character growth isn’t locked away:</span><span>Instead of having a skill tree that the player linearly progresses through, the player will be allowed to acquire any of the dozens of item/abilities in any order.</li>
+            <li><span>RPG stats that make sense:</span><span>Instead of having ATK, DEF, AGI, DEX, INT, RES and other complex, obfuscated stats, Rage quest only employs POW and DEF. POW is how strong your abilities are, and DEF is a flat damage reduction. A point system lets you can build these stats however you’d like.</li>
+            <li><span>Miscellaneous:</span><span>4 worlds (each about an hour long), branching paths, sides quests, NPCs, loot, bosses, character growth, and all that good stuff an RPG should have.</li>
+            <li><span>Made for both keyboard/mouse and touchscreens</span><span>Whether you're playing on a desktop, laptop, or a touchscreen computer, Rage Quest's battle system takes advantage of your ability to quickly pinpoint a location on your screen.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="demo" v-show="currentTab === 'demo'">
+        <div class="card">
+          <p>Download the demo for windows or mac here: <a target="_blank" class="std-btn" href="https://nicholasfisher.itch.io/rage-quest">itch.io</a></p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="btn-row">
+          <a target="_blank" class="std-btn" href="https://twitter.com/NickFisherDev"><fa icon="twitter"></fa><span>@NickFisherDev</span></a>
+          <a target="_blank" class="std-btn" href="https://www.facebook.com/ragequest/"><fa icon="facebook"></fa><span>/ragequest</span></a>
+          <a target="_blank" class="std-btn small-text" href="mailto:nickfishergamedev@gmail.com"><fa icon="envelope"></fa><span>nickfishergamedev@gmail.com</span></a>
+        </div>
+        <div class="copyright">© Copyright Nicholas Fisher 2017</div>
+      </div>
+    </div>
+    <div class="image-viewer-container" v-show="imageViewerVisible" @click="imageViewerVisible = false">
+      <div class="image-viewer">
+        <button class="icon-btn close-btn" @click="imageViewerVisible = false"><fa icon="times"></fa></button>
+        <div class="image-viewer-image" :style="'background-image: url(' + currImage + ')'"></div>
+      </div>
+    </div>
+    <div class="menu mobile-only" :class="{ 'active' : isMobileMenuActive }">
+      <button id="mobile-menu-btn" class="btn trigger" @click="onMobileMenuBtnClick">
+        <fa icon="bars"></fa>
+        <fa icon="close"></fa>
+      </button>
+      <div class="icons">
+        <div class="rotater">
+          <button class="btn btn-icon" @click="setCurrentTabTo('about')" :class="{'active': currentTab === 'about'}">
+            <fa icon="question-circle"></fa>
+            <div>About</div>
+          </button>
+        </div>
+        <div class="rotater">
+          <button class="btn btn-icon" @click="setCurrentTabTo('media')" :class="{'active': currentTab === 'media'}">
+            <fa icon="image"></fa>
+            <div>Media</div>
+          </button>
+        </div>
+        <div class="rotater">
+          <button class="btn btn-icon" @click="setCurrentTabTo('presskit')" :class="{'active': currentTab === 'presskit'}">
+            <fa icon="newspaper-o"></fa>
+            <div>Press Kit</div>
+          </button>
+        </div>
+        <div class="rotater">
+          <button class="btn btn-icon" @click="setCurrentTabTo('demo')" :class="{'active': currentTab === 'demo'}">
+            <fa icon="gamepad"></fa>
+            <div>Demo</div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/app-dist.js"></script>
+  <script>
+    Vue.component('fa', {
+      template: '#fa-template',
+      props: ['icon'],
+    });
+  </script>
+  <template id="fa-template">
+    <i :class="'fa fa-' + icon" aria-hidden="true"></i>
+  </template>
+  <script>
+    Vue.component('thumb', {
+      template: '#thumb-template',
+      props: ['img'],
+    });
+  </script>
+  <template id="thumb-template">
+    <div class="gallery-thumb">
+      <button :style="'background-image: url(' + img + ')'" :onclick="'onThumbnailClick(\'' + img + '\')'"></button>
+    </div>
+  </template>
+</body>
+</html>
